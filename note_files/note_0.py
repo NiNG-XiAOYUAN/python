@@ -93,7 +93,7 @@ while True :
             print("it\`s smoll")
         else:
             print("it\`s bigger")
-'''
+
 moshushi= ["dawei","aidixun","mzha"]
 for i in moshushi:
     print(f"{moshushi.title(),is}")

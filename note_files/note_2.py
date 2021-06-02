@@ -37,11 +37,17 @@ describe_city("nanjing")
 describe_city(city= "nanjing")
 describe_city("shanghai")
 describe_city("beijing",nation= "usa")
+
+
 # 返回值    returu 语句
 def got_name(fristname,lastname):
     '''返回全名'''
-    full_name = fristname + lastname   
+    full_name = fristname + lastname   #fullname = f"{fristname}{lastname}"
     return full_name.title()
+musician = got_name("wang","yulong")     # 函数里没有print   return w将 full_name.title() 返回给调用函数的代码行  
+                                         # 相当于 full_name.title() = got_name("wang","yulong") 
+print(musician)
+                        # print('wang','long')
 
-#print('wang','long')
+                        
 
