@@ -20,4 +20,3 @@ def describe_pet(pet_type , pet_name = "dog"):
     print(f"my {pet_type}'s name is {pet_name}")
 describe_pet("ddd")   # "ddd"默认关联到位置实参 
 
-大师傅地方
