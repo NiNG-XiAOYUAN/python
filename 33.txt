@@ -1,7 +1,0 @@
-d  = ("china":"beijing","uk":"newyork","deguo":"munihei")
-name = srt(input("输入国家名称："))
-    if name in d:
-       print(d.get("name"))
-
-    else:
-      print("暂时没有收录这个国家")
