@@ -49,5 +49,46 @@ musician = got_name("wang","yulong")     # 函数里没有print   return w将 fu
 print(musician)
                         # print('wang','long')
 
-                        
+import turtle
+   
+turtle.pensize(4)
+turtle.pencolor('red')
+    
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+    
+turtle.mainloop()            
+
+a = int(input('a = '))
+b = int(input('b = '))
+print('%d + %d = %d' % (a, b, a + b))
+
+"""
+猜数字游戏
+
+Version: 0.1
+Author: 骆昊
+"""
+import random
+
+answer = random.randint(1, 100)
+counter = 0
+while True:
+    counter += 1
+    number = int(input('请输入: '))
+    if number < answer:
+        print('大一点')
+    elif number > answer:
+        print('小一点')
+    else:
+        print('恭喜你猜对了!')
+        break
+print('你总共猜了%d次' % counter)
+if counter > 7:
+    print('你的智商余额明显不足')
 
