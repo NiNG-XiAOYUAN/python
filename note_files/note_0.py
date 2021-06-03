@@ -74,7 +74,7 @@ print(sorted(place,reverse=True))
 print(place)
 place.sort(reverse=True)
 print (place)
- ''' 
+5 
 #猜数游戏
 import random
 num= random.randint(1,100)
@@ -96,4 +96,40 @@ while True :
 
 moshushi= ["dawei","aidixun","mzha"]
 for i in moshushi:
-    print(f"{moshushi.title(),is}")
+    print(f"{i.title()}")
+
+
+row = int(input('请输入行数: '))
+for i in range(row):
+    for _ in range(i + 1):
+        print('*', end='')
+    print()
+
+
+for i in range(row):
+    for j in range(row):
+        if j < row - i - 1:
+            print(' ', end='')
+        else:
+            print('*', end='')
+    print()
+
+for i in range(row):
+    for _ in range(row - i - 1):
+        print(' ', end='')
+    for _ in range(2 * i + 1):
+        print('*', end='')
+    print()
+    '''
+for num in range(100, 1000):
+    low = num % 10
+    mid = num // 10 % 10
+    high = num // 100
+    if num == low ** 3 + mid ** 3 + high ** 3:
+        print(num)
+num = int(input('num = '))
+reversed_num = 0
+while num > 0:
+    reversed_num = reversed_num * 10 + num % 10
+    num //= 10
+print(reversed_num)

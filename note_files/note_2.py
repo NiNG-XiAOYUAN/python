@@ -1,4 +1,4 @@
-
+"""
 # 关键字实参
 def describe_pet(pet_type,pet_name):
     '''显示宠物信息'''
@@ -38,7 +38,7 @@ describe_city("shanghai")
 describe_city("beijing",nation= "usa")
 
 
-# 返回值    returu 语句
+# 函数返回简单值    returu 语句
 def got_name(fristname,lastname):
     '''返回全名'''
     full_name = fristname + lastname   #fullname = f"{fristname}{lastname}"
@@ -67,12 +67,8 @@ a = int(input('a = '))
 b = int(input('b = '))
 print('%d + %d = %d' % (a, b, a + b))
 
-"""
-猜数字游戏
+# 猜数字游戏
 
-Version: 0.1
-Author: 骆昊
-"""
 import random
 
 answer = random.randint(1, 100)
@@ -90,4 +86,58 @@ while True:
 print('你总共猜了%d次' % counter)
 if counter > 7:
     print('你的智商余额明显不足')
+"""
+'''
+# 使实参成为可选
+def get_name(frist_name,last_name,middle_name = ""):
+    """返回全名"""
+    if middle_name:  # python 将非空字符串解读为true
+        fullname = frist_name + middle_name + last_name
+    else:
+        fullname = frist_name + last_name
+    return fullname.title()
+musician = get_name("wang","yulong","www")  
+print(musician)
+'''
+# 函数返回字典（复杂）
+def build_person(fristname,lastname,middlename = " "):   # 条件测试中none 相当于 false
+    '''返回列表型信息'''                                                # 任何情况函数都会存储姓名，age相当于附加备注 可选
+    if middlename:
+        name_info = {"frist":fristname,"middlename":middlename,"last":lastname}
+    else:
+        name_info  = {"frist":fristname,"last":lastname}
+    return name_info
+aaa = build_person("wang","yulong")
+print(aaa)
+aaa = build_person(fristname="wang",lastname="yulong",middlename="eee")
+print(aaa)
+aaa = build_person("wang","yulong","uuu")
+print(aaa)
+
+while True:
+    print("\nplease inter your name: ")
+    print("(enter 'q' at any time to quit )")
+    fristname = input ("fristname: ")
+
+    if fristname ==  "q":
+        break
+    add = input("do you have middlename?(yes/no)")
+    if add != "no":
+        middlename = input ("middlename: ") 
+        if middlename ==  "q":
+            break      
+        lastname = input ("lastname: ")
+        if lastname ==  "q":
+            break
+        adding = build_person(fristname,lastname,middlename)   # 3个 直接用buid_person
+        print(f'hello {adding }')
+    else:
+        lastname = input ("lastname: ")
+        if lastname ==  "q":
+            break
+        adding = build_person(fristname,lastname)         #2个 提前 新建一个两个的函数 我不可能给人家加名字吧（如果用原来的）！！！   没弄呢
+        print(f'hello {adding }')
+
+    
+    
 
