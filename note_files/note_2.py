@@ -86,11 +86,11 @@ while True:
 print('你总共猜了%d次' % counter)
 if counter > 7:
     print('你的智商余额明显不足')
-"""
-'''
+
+
 # 使实参成为可选
 def get_name(frist_name,last_name,middle_name = ""):
-    """返回全名"""
+    '''返回全名'''
     if middle_name:  # python 将非空字符串解读为true
         fullname = frist_name + middle_name + last_name
     else:
@@ -98,7 +98,7 @@ def get_name(frist_name,last_name,middle_name = ""):
     return fullname.title()
 musician = get_name("wang","yulong","www")  
 print(musician)
-'''
+
 # 函数返回字典（复杂）
 def build_person(fristname,lastname,middlename = " "):   # 条件测试中none 相当于 false
     '''返回列表型信息'''                                                # 任何情况函数都会存储姓名，age相当于附加备注 可选
@@ -138,6 +138,74 @@ while True:
         adding = build_person(fristname,lastname)         #2个 提前 新建一个两个的函数 我不可能给人家加名字吧（如果用原来的）！！！   没弄呢
         print(f'hello {adding }')
 
-    
-    
+# 向函数传递列表
+def greet_users(names):
+    '''列表调用函数 逐个打印问候'''
+    for name in names:
+        print(f"hello {name.title()}")
+         
+usernames = ['www','ttt','bbb']
+greet_users(usernames)
+"""
+# 函数中修改列表
+# 未打印的打印 并放到已经打印的 原来变空
 
+def print_designs(unprinted_designs,complete_designs):
+    """daying"""
+    while  unprinted_designs:   #for addings in unprinted_designs: print (unprinted_designsqqq) 会多个['nihao'] 不符合题意
+        addings = unprinted_designs.pop()
+        print(f"we will complete {addings.title()}!")
+        complete_designs.append(addings)
+def complete_print(complete_design):
+    print(f'the following things has pritned')
+    for complete_design in complete_designsqqq:
+        print (complete_design)
+
+unprinted_designsqqq = ["nihao",'wohao','dajiahao']
+complete_designsqqq = []
+print_designs(unprinted_designsqqq,complete_designsqqq) #保留原材料 创建副本 print_designs(unprinted_designsqqq[:],complete_designsqqq)
+complete_print(complete_designsqqq)
+print (unprinted_designsqqq)
+# 8-9
+msg_txt = ['sd','nm','hk','uk']
+def show_message(msgs):
+    '''消息'''
+    for msgs in msg_txt:
+        print(f"toppings: {msgs.title()} ")
+show_message(msg_txt)
+print("fa 2")
+sent_messages = []
+def send_messages(msg_txt_1,sent_messages_1):
+    '''ffff'''
+    while msg_txt_1:
+        addings = msg_txt_1.pop(0)
+        sent_messages_1.append(addings)
+    for adding in sent_messages:
+        print (adding.title())
+send_messages(msg_txt[:],sent_messages)
+print(sent_messages)
+print(msg_txt)
+# 向函数传递任意数量的实参
+def make_pizza(*toppings):   # * 创建空元组 所以可解释why输出为touple
+    '''接受未知数量实参'''
+    print(toppings)
+make_pizza("ffffffff")
+make_pizza('bgbg','dfdf','xcxc')
+# 优化
+def make_pizza(*toppings):  
+    '''接受未知数量实参'''
+    print('\nMaking a pizza with the following toppings: ')
+    for topping in toppings:
+        print(f'-{topping}')
+make_pizza("ffffffff")
+make_pizza('bgbg','dfdf','xcxc')
+# 函数 结合使用位置实参和任意数量实参 
+def make_pizza(size,*toppings):  
+    '''只做披萨'''
+    print(f'\nMaking a {size}-inch pizza with the following toppings: ')
+    for topping in toppings:
+        print(f'-{topping}')
+make_pizza(14,"ffffffff")
+make_pizza(8,'bgbg','dfdf','xcxc')
+
+# 函数 使用任意数量关键字实参
