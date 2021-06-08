@@ -219,9 +219,20 @@ print (user_info)
 
 #函数与模块。
 # 参考pizza.py making_pizzas.py
-
+'''
+import pizza    #我们提前有一个pizza.py文件,必须与本文件所在同一目录。才能成功调用。
+pizza.make_pizza(15,"dhfvdf")
+'''
 # 导入特定的函数
 # 参考pizza.py making_pizzas.py
 from pizza_1 import make_pizza  #例如pizza.py 文件中有两个以上函数。指定导入某一函数。
-make_pizza.make_pizza(15,"dhfvdf")
-make_pizza.make_pizza(15,"dhfvdf")
+make_pizza(15,"piiiivdf")       # 注意上面(line 221)与这里的区别。
+
+#使用 as 给函数指定别名  # 函数与程序中有冲突名字 或为了便于记
+from pizza_1 import make_pizza as mmp
+mmp(15,"ggggvdf")
+#使用 as 给函数指定别名
+import pizza as p
+p.make_pizza(14,"dhfghjhvdf")
+# 调用模块中 所有函数
+from pizza import *
