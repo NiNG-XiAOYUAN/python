@@ -208,4 +208,20 @@ def make_pizza(size,*toppings):
 make_pizza(14,"ffffffff")
 make_pizza(8,'bgbg','dfdf','xcxc')
 
-# 函数 使用任意数量关键字实参  梵蒂冈
+# 函数 使用任意数量关键字实参  不知道函数接受的是什么样的信息
+def  buid_profiles(frist,last,**users_info):
+    '''创建一个字典，其中包含我们知道的有关用户的一切。'''
+    users_info['fname'] = frist
+    users_info['lname'] = last
+    return users_info
+user_info = buid_profiles('sss','ddd',location = 'sdv',field = 'bnbn')
+print (user_info)
+
+#函数与模块。
+# 参考pizza.py making_pizzas.py
+
+# 导入特定的函数
+# 参考pizza.py making_pizzas.py
+from pizza_1 import make_pizza  #例如pizza.py 文件中有两个以上函数。指定导入某一函数。
+make_pizza.make_pizza(15,"dhfvdf")
+make_pizza.make_pizza(15,"dhfvdf")
