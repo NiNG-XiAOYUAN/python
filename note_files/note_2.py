@@ -47,20 +47,25 @@ musician = got_name("wang","yulong")     # 函数里没有print   return w将 fu
                                          # 相当于 full_name.title() = got_name("wang","yulong") 
 print(musician)
                         # print('wang','long')
+                    
+def opt_seq(func,seq)
+    r = [fun(i) for x in seq]
+    return r
+q = opt_seq(abs,range(-5,6))
+print(q)
+
 
 import turtle
-   
+ 
 turtle.pensize(4)
-turtle.pencolor('red')
-    
+turtle.pencolor('red')  
 turtle.forward(100)
 turtle.right(90)
 turtle.forward(100)
 turtle.right(90)
 turtle.forward(100)
 turtle.right(90)
-turtle.forward(100)
-    
+turtle.forward(100)  
 turtle.mainloop()            
 
 a = int(input('a = '))
