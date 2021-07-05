@@ -167,7 +167,7 @@ class teacher:
         '''df'''        self.name = name
         self.job = job
 
-    def zuoye(self):
+    def zuoye(self):宝宝
 """        
 
 
