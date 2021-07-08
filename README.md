@@ -1,6 +1,4 @@
----
-typora-copy-images-to: picture
----
+d
 
 # python_files
 
