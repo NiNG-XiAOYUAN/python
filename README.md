@@ -1,4 +1,3 @@
-d
 
 # python_files
 
