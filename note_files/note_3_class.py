@@ -261,6 +261,12 @@ my_ecar_2 = Electriccar_3('changan','cs75',2019)
 my_ecar_2.battery.describe_battery()
 my_ecar_2.battery.get_range()
 
+#  导入类的应用  和之前导入模块（函数）类似
+# 参考 my_car.py  和 car.py 
+
+
+
+
 
 
 
