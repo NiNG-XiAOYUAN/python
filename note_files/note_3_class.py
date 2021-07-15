@@ -264,6 +264,14 @@ my_ecar_2.battery.get_range()
 #  导入类的应用  和之前导入模块（函数）类似
 # 参考 my_car.py  和 car.py 
 
+# python 标准库   自带的
+#例如
+from random import randint
+print(randint(1,9))
+from random import choice # 将一个列表或元组作为参数 并随即返回一个
+players = ['sds','dads','jtf','tykuik','rttyyjty','ftutkyu']
+isinfo = choice(players)
+print (isinfo)
 
 
 
