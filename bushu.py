@@ -296,7 +296,7 @@ if __name__ ==  "__main__":
     # 登录密码
     passwd = "qazwsx12"
     # 要修改的步数，直接输入想要修改的步数值，留空为随机步数
-    step ="22445"
+    step ="12445"
  
     user_list = user.split('#')
     passwd_list = passwd.split('#')
@@ -327,4 +327,4 @@ if __name__ ==  "__main__":
         elif Pm == 'off':
             pass
     else:
-        print('用户名和密码数量不对')
+        print('用户名和密码数量不对fff')
