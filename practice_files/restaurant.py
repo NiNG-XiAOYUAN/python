@@ -36,4 +36,4 @@ class Restaurant:
             ice_list.append(icecream)
         print (ice_list)
 
-        ... 
+        ... 。。
